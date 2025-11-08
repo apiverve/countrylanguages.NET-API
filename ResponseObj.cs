@@ -4,39 +4,40 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("country")]
-    public string country { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("country")]
+        public string Country { get; set; }
 
-    [JsonProperty("name")]
-    public string name { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-    [JsonProperty("officialName")]
-    public string officialName { get; set; }
+        [JsonProperty("officialName")]
+        public string OfficialName { get; set; }
 
-    [JsonProperty("officialLanguages")]
-    public string[] officialLanguages { get; set; }
+        [JsonProperty("officialLanguages")]
+        public string[] OfficialLanguages { get; set; }
 
-    [JsonProperty("officialLanguageCount")]
-    public int officialLanguageCount { get; set; }
+        [JsonProperty("officialLanguageCount")]
+        public int OfficialLanguageCount { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
